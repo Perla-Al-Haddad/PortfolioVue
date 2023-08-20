@@ -1,4 +1,4 @@
-# vue-crash
+# Vue Portfolio
 
 ## Project setup
 ```
