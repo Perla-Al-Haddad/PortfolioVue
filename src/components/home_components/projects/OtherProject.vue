@@ -25,7 +25,7 @@
                 <font-awesome-icon icon="fa-solid fa-up-right-from-square" />
               </a>
 
-              <GithubLink v-if="project.githubUrl" :url="githubUrl" />
+              <GithubLink v-if="project.githubUrl" :url="project.githubUrl" />
             </div>
           </div>
           <p class="card-text text-gray">
