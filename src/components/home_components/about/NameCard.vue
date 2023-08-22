@@ -21,10 +21,7 @@
               target="_blank"
               href="https://github.com/Perla-Al-Haddad"
             >
-              <font-awesome-icon
-                class="fa-2xl"
-                icon="fa-brands fa-github"
-              />
+              <font-awesome-icon class="fa-2xl" icon="fa-brands fa-github" />
             </a>
           </li>
           <li class="accounts-links">
@@ -33,10 +30,7 @@
               target="_blank"
               href="https://lb.linkedin.com/in/perla-al-haddad-092880242"
             >
-              <font-awesome-icon
-                class="fa-2xl"
-                icon="fa-brands fa-linkedin"
-              />
+              <font-awesome-icon class="fa-2xl" icon="fa-brands fa-linkedin" />
             </a>
           </li>
         </ul>

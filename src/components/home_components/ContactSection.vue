@@ -20,15 +20,15 @@
 
 <style scoped>
 .btn-contact {
-    padding: 1rem 1.5rem;
-    background-color: transparent;
-    border-radius: 5px;
-    border: #38b6ff 2px solid;
-    font-size: 1.2rem;
+  padding: 1rem 1.5rem;
+  background-color: transparent;
+  border-radius: 5px;
+  border: #38b6ff 2px solid;
+  font-size: 1.2rem;
 }
 
 .btn-contact:hover {
-    background-color: #38b6ff;
-    border-color: #38b6ff;
+  background-color: #38b6ff;
+  border-color: #38b6ff;
 }
 </style>

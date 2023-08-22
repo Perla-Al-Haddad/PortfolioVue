@@ -19,7 +19,7 @@
 export default {
   name: "SkillBadgeList",
   props: {
-    skills:Array,
+    skills: Array,
   },
 };
 </script>

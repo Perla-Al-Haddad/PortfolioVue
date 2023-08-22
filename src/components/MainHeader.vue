@@ -96,10 +96,10 @@
 </template>
 
 <script>
-import ThemeToggleButton from "./ThemeToggleButton.vue";
+import ThemeToggleButton from "./utils/ThemeToggleButton.vue";
 
 export default {
-  name: "Header",
+  name: "MainHeader",
   components: {
     ThemeToggleButton,
   },

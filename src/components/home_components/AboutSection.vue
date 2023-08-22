@@ -63,7 +63,7 @@
 </template>
 
 <script>
-import NameCard from "./NameCard.vue";
+import NameCard from "./about/NameCard.vue";
 
 export default {
   name: "AboutSection",

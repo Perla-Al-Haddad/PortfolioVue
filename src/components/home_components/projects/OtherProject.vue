@@ -1,7 +1,9 @@
 <template>
   <div class="col">
     <div class="card h-100 bg-dark text-light">
-      <div class="card-body px-4 py-4 d-flex flex-column align-items-end justify-content-between">
+      <div
+        class="card-body px-4 py-4 d-flex flex-column align-items-end justify-content-between"
+      >
         <div>
           <p class="mb-5 mt-3 text-blue text-center">
             <font-awesome-icon class="fa-2xl" :icon="project.icon" />
@@ -10,7 +12,7 @@
             <h5 class="card-title fw-bold mb-3 text-light">
               {{ project.name }}
             </h5>
-  
+
             <div class="d-flex gap-2 align-items-baseline">
               <a
                 v-if="project.url"
@@ -22,7 +24,7 @@
               >
                 <font-awesome-icon icon="fa-solid fa-up-right-from-square" />
               </a>
-  
+
               <GithubLink v-if="project.githubUrl" :url="githubUrl" />
             </div>
           </div>
@@ -40,9 +42,9 @@
 </template>
 
 <script>
-import SkillBadgeList from "./SkillBadgeList.vue";
-import GithubLink from "./GithubLink.vue";
-import LearnMoreLink from "./LearnMoreLink.vue";
+import SkillBadgeList from "../../utils/SkillBadgeList.vue";
+import GithubLink from "../../utils/GithubLink.vue";
+import LearnMoreLink from "../../utils/LearnMoreLink.vue";
 
 export default {
   name: "OtherProject",

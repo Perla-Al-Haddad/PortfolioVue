@@ -26,8 +26,8 @@
 </template>
 
 <script>
-import FeaturedProject from "./FeaturedProject.vue";
-import OtherProject from "./OtherProject.vue";
+import FeaturedProject from "./projects/FeaturedProject.vue";
+import OtherProject from "./projects/OtherProject.vue";
 
 export default {
   name: "ProjectSection",

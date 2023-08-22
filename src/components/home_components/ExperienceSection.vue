@@ -5,7 +5,11 @@
     <div v-for="(job, index) in jobExperiences" :key="index" class="mb-5">
       <h4>
         <span class="text-blue">{{ job.jobTitle }}</span>
-        <a :href="job.employerUrl" target="_blank" class="text-gray fs-6 text-decoration-none">
+        <a
+          :href="job.employerUrl"
+          target="_blank"
+          class="text-gray fs-6 text-decoration-none"
+        >
           @ {{ job.employerName }}
         </a>
       </h4>
@@ -27,7 +31,7 @@
 </template>
 
 <script>
-import SkillBadgeList from "./SkillBadgeList.vue";
+import SkillBadgeList from "../utils/SkillBadgeList.vue";
 
 export default {
   name: "ExperienceSection",

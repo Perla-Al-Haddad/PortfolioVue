@@ -1,24 +1,24 @@
 <template>
   <div id="appContent" :class="{ light: isLightMode }">
-    <Header @toggle-light-mode="toggleIsLightMode()" />
+    <MainHeader @toggle-light-mode="toggleIsLightMode()" />
     <router-view></router-view>
-    <Footer />
+    <MainFooter />
   </div>
 </template>
 
 <script>
-import Header from "./components/Header.vue";
-import Footer from "./components/Footer.vue";
+import MainHeader from "./components/MainHeader.vue";
+import MainFooter from "./components/MainFooter.vue";
 
 export default {
   name: "App",
   components: {
-    Header,
+    MainHeader,
     // AboutSection,
     // ExperienceSection,
     // ProjectSection,
     // ContactSection,
-    Footer,
+    MainFooter,
   },
   data() {
     return {

@@ -29,9 +29,9 @@
 export default {
   name: "GithubLink",
   props: {
-    url: String
-  }
-}
+    url: String,
+  },
+};
 </script>
 
 <style scoped>

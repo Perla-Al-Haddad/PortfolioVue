@@ -1,6 +1,9 @@
 <template>
   <div class="wrapper">
-    <router-link to="/coming-soon" class="text-blue text-decoration-none arrow-button">
+    <router-link
+      to="/coming-soon"
+      class="text-blue text-decoration-none arrow-button"
+    >
       learn more
       <i class="arrow-button__icon"></i>
     </router-link>

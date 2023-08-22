@@ -13,7 +13,7 @@
     ></a>
   </h4>
   <div class="sm-carousel-container">
-    <ProjectCarousel :forMobile="true" :project="project"/>
+    <ProjectCarousel :forMobile="true" :project="project" />
   </div>
   <div class="bg-dark p-4 rounded description-container">
     <p class="m-0">
@@ -29,7 +29,7 @@
 
 <script>
 import ProjectCarousel from "./ProjectCarousel.vue";
-import SkillBadgeList from "./SkillBadgeList.vue";
+import SkillBadgeList from "../../../utils/SkillBadgeList.vue";
 
 export default {
   name: "ProjectDescription",
@@ -45,7 +45,7 @@ export default {
   },
   components: {
     SkillBadgeList,
-    ProjectCarousel
+    ProjectCarousel,
   },
 };
 </script>

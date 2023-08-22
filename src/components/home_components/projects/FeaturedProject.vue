@@ -22,8 +22,8 @@
 </template>
 
 <script>
-import ProjectCarousel from "./ProjectCarousel.vue";
-import ProjectDescription from "./ProjectDescription.vue";
+import ProjectCarousel from "./featured_project_components/ProjectCarousel.vue";
+import ProjectDescription from "./featured_project_components/ProjectDescription.vue";
 
 export default {
   name: "FeaturedProject",
