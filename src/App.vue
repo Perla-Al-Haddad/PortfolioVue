@@ -14,10 +14,6 @@ export default {
   name: "App",
   components: {
     MainHeader,
-    // AboutSection,
-    // ExperienceSection,
-    // ProjectSection,
-    // ContactSection,
     MainFooter,
   },
   data() {
