@@ -55,12 +55,12 @@ export default {
   .description-container {
     width: 600px;
   }
+  
+  .badge-list-container {
+    width: 80%;
+  }
 }
 .right-badge-justify {
   justify-content: end;
-}
-
-.badge-list-container {
-  width: 80%;
 }
 </style>
