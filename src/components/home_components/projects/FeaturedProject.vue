@@ -65,6 +65,12 @@ export default {
     width: min-content;
   }
 
+  .project-description-container:has(.right-badge-justify) {
+    display: flex;
+    flex-flow: column;
+    align-items: end;
+  }
+
   .project-carousel-container {
     grid-column: 7 / -1;
     z-index: 0 !important;

@@ -54,7 +54,7 @@
                   <a
                     class="dropdown-item text-light p-0 underline-hover-effect"
                     target="_blank"
-                    :href="`../assets/docs/${resumeLink.url}`"
+                    :href="`./assets/static/${resumeLink.url}`"
                     download
                   >
                     {{ resumeLink.name }}

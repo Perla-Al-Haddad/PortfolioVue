@@ -42,6 +42,49 @@ export default {
     return {
       jobExperiences: [
         {
+          jobTitle: "Software Engineering Team Lead",
+          employerName: "Liaison International",
+          employerUrl: "https://www.liaisonedu.com/",
+          description: `
+            As Software Engineering Team Lead at Liaison International, I led the successful launch of two high-traffic platforms—<a target="_blank" href="https://explorehealthcareers.org">Explore Health Careers</a> and <a target="_blank" href="https://residencycas.com">ResidencyCAS.com</a>—within two months, <span class="text-light">optimized for SEO, accessibility, and 3,000 concurrent users</span>. I authored technical architecture plans, facilitated agile ceremonies, and aligned engineering efforts with business goals. By refactoring CI/CD pipelines and formalizing code reviews, <span class="text-light">I reduced bugs by 30% and cut deployment times by 80%</span>.
+          `,
+          daterange: "Dec 2023 — Sep 2024",
+          skills: [            
+            { type: "text", label: "Software Architecture & Design" },
+            { type: "text", label: "Django" },
+            { type: "text", label: "Python" },
+            { type: "text", label: "Java" },
+            { type: "link", label: "Quarkus", url: "https://quarkus.io/" },
+            { type: "link", label: "Wagtail", url: "https://wagtail.org/" },
+            { type: "text", label: "PostgreSQL" },
+            { type: "text", label: "Redis" },
+            { type: "text", label: "Docker" },
+            { type: "text", label: "Agile / Scrum" },
+            { type: "text", label: "Jenkins" },
+            { type: "text", label: "AWS" },
+          ],
+        },
+        {
+          jobTitle: "Backend Developer",
+          employerName: "Liaison International",
+          employerUrl: "https://www.liaisonedu.com/",
+          description: `
+            As a Backend Developer, I contributed to <a target="_blank" href="https://myliaison.com">MyLiaison</a>, a university catalog platform, and <a target="_blank" href="https://livingprofile.myliaison.com/">Living Profile</a>, a student profile builder. I led the technical redesign of a Django/Wagtail CMS platform, <span class="text-light">improving response times by 75%</span> and enhancing code maintainability. I developed high-performance APIs using Java/Quarkus and optimized search with OpenSearch to <span class="text-light">support 6,000 concurrent users</span>. Additionally, I implemented SEO best practices—dynamic sitemaps, meta tags, and load-time improvements—leading to the successful <span class="text-light">indexing of over 2,000 new pages</span> on Google.
+          `,
+          daterange: "Dec 2023 — Sep 2024",
+          skills: [            
+            { type: "text", label: "Django" },
+            { type: "text", label: "Python" },
+            { type: "text", label: "Java" },
+            { type: "link", label: "Quarkus", url: "https://quarkus.io/" },
+            { type: "link", label: "Wagtail", url: "https://wagtail.org/" },
+            { type: "text", label: "PostgreSQL" },
+            { type: "text", label: "Redis" },
+            { type: "text", label: "Docker" },
+            { type: "text", label: "AWS" },
+          ],
+        },
+        {
           jobTitle: "Full Stack Web Developer",
           employerName: "UN-ESCWA",
           employerUrl: "https://www.unescwa.org/",
@@ -59,7 +102,7 @@ export default {
             meetings and adhered to an
             <span class="text-light">agile workflow</span>.
             `,
-          daterange: "Nov 2021 — Present",
+          daterange: "Nov 2021 — Sep 2023",
           skills: [
             {
               type: "link",

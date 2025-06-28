@@ -21,7 +21,7 @@
     </p>
   </div>
   <div
-    :class="`d-flex flex-wrap gap-2 pt-3 ${isOdd ? 'right-badge-justify' : ''}`"
+    :class="`badge-list-container d-flex flex-wrap gap-2 pt-3 ${isOdd ? 'right-badge-justify' : ''}`"
   >
     <SkillBadgeList :skills="project.skills" />
   </div>
@@ -58,5 +58,9 @@ export default {
 }
 .right-badge-justify {
   justify-content: end;
+}
+
+.badge-list-container {
+  width: 80%;
 }
 </style>

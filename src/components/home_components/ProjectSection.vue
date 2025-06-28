@@ -39,6 +39,68 @@ export default {
     return {
       featuredProjects: [
         {
+          name: "Explore Health Careers",
+          url: "https://explorehealthcareers.org/",
+          description:
+            "ExploreHealthCareers.org is a comprehensive platform that allows users to explore over 100 healthcare career paths, with detailed job profiles, educational pathways, salary expectations, and a Career Search Tool. It also features a user-friendly CMS admin tool, enabling easy updates and efficient responses to client requests.",
+          skills: [
+            { type: "text", label: "Django" },
+            { type: "text", label: "Python" },
+            { type: "link", label: "Wagtail", url: "https://wagtail.org/" },
+            { type: "text", label: "Hotwire / TurboJS / StimulusJS" },
+            { type: "text", label: "HTML / CSS / SCSS / Javascript" },
+            { type: "text", label: "Tailwind" },
+            { type: "text", label: "PostgreSQL" },
+            { type: "text", label: "Redis" },
+            { type: "text", label: "Docker" },
+            { type: "text", label: "AWS" },
+            { type: "text", label: "Opensearch" },
+          ],
+          images: ["ehc_01.png", "ehc_02.png", "ehc_03.png", "ehc_04.png", "ehc_05.png"],
+        },
+        {
+          name: "ResidencyCAS.com",
+          url: "https://residencycas.com/",
+          description:
+            "I worked on the ResidencyCAS resource hub, created to guide applicants, program directors, clerkship advisors, and medical schools. The site offers clear, detailed resources to help users navigate the residency selection process and make the most of the platform’s features.",
+          skills: [
+            { type: "text", label: "Django" },
+            { type: "text", label: "Python" },
+            { type: "link", label: "Wagtail", url: "https://wagtail.org/" },
+            { type: "text", label: "Hotwire / TurboJS / StimulusJS" },
+            { type: "text", label: "HTML / CSS / SCSS / Javascript" },
+            { type: "text", label: "Tailwind" },
+            { type: "text", label: "PostgreSQL" },
+            { type: "text", label: "Redis" },
+            { type: "text", label: "Docker" },
+            { type: "text", label: "AWS" },
+          ],
+          images: ["rescas_01.png", "rescas_02.png", "rescas_03.png"],
+        },
+        {
+          name: "MyLiaison",
+          url: "https://myliaison.com/",
+          description:
+            "MyLiaison is a platform that allows students to search for schools and undergraduate/graduate programs. Users can create an account, linked to the Living Profile project, to save their personal and educational data. The site also offers articles on student resources and a career explorer to help guide students through their academic and professional journey.",
+          skills: [
+            { type: "text", label: "Django" },
+            { type: "text", label: "Python" },
+            { type: "text", label: "Java" },
+            { type: "link", label: "Quarkus", url:"https://quarkus.io/" },
+            { type: "link", label: "Wagtail", url: "https://wagtail.org/" },
+            { type: "text", label: "Hotwire / TurboJS / StimulusJS" },
+            { type: "text", label: "HTML / CSS / SCSS / Javascript" },
+            { type: "text", label: "Tailwind" },
+            { type: "link", label: "Keycloak", url: "https://www.keycloak.org/" },
+            { type: "text", label: "PostgreSQL" },
+            { type: "text", label: "Redis" },
+            { type: "text", label: "Docker" },
+            { type: "text", label: "AWS" },
+            { type: "text", label: "Opensearch" },
+          ],
+          images: ["myl_01.png", "myl_02.png", "myl_03.png", "myl_04.png", "myl_05.png"],
+        },
+        {
           name: "UN RCP Open Data Catalog",
           url: "https://datacatalog.unescwa.org/",
           description:

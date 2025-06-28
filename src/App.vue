@@ -43,6 +43,10 @@ body {
   font-size: 80%;
 }
 
+a {
+  color: #38b6ff;
+}
+
 .text-blue {
   color: #38b6ff;
 }
