@@ -56,7 +56,7 @@ export default {
             { type: "text", label: "AWS" },
             { type: "text", label: "Opensearch" },
           ],
-          images: ["ehc_01.png", "ehc_02.png", "ehc_03.png", "ehc_04.png", "ehc_05.png"],
+          images: ["ehc_01.webp", "ehc_02.webp", "ehc_03.webp", "ehc_04.webp", "ehc_05.webp"],
         },
         {
           name: "ResidencyCAS.com",
@@ -75,7 +75,7 @@ export default {
             { type: "text", label: "Docker" },
             { type: "text", label: "AWS" },
           ],
-          images: ["rescas_01.png", "rescas_02.png", "rescas_03.png"],
+          images: ["rescas_01.webp", "rescas_02.webp", "rescas_03.webp"],
         },
         {
           name: "MyLiaison",
@@ -98,7 +98,7 @@ export default {
             { type: "text", label: "AWS" },
             { type: "text", label: "Opensearch" },
           ],
-          images: ["myl_01.png", "myl_02.png", "myl_03.png", "myl_04.png", "myl_05.png"],
+          images: ["myl_01.webp", "myl_02.webp", "myl_03.webp", "myl_04.webp", "myl_05.webp"],
         },
         {
           name: "UN RCP Open Data Catalog",
@@ -118,7 +118,7 @@ export default {
             { type: "text", label: "Spark" },
             { type: "text", label: "Azure" },
           ],
-          images: ["dc_01.png", "dc_02.png", "dc_03.png"],
+          images: ["dc_01.webp", "dc_02.webp", "dc_03.webp"],
         },
         {
           name: "UN Arab Region Data and Policy Support Hub",
@@ -136,7 +136,7 @@ export default {
             { type: "text", label: "Delta" },
             { type: "text", label: "Databricks" },
           ],
-          images: ["dp_01.png", "dp_02.png", "dp_03.png", "dp_04.png"],
+          images: ["dp_01.webp", "dp_02.webp", "dp_03.webp", "dp_04.webp"],
         },
         {
           name: "Arab Region Geospatial Portal",
@@ -158,7 +158,7 @@ export default {
             { type: "text", label: "Azure functions" },
             { type: "text", label: "Azure blob storage" },
           ],
-          images: ["geo_01.png", "geo_02.png", "geo_03.png"],
+          images: ["geo_01.webp", "geo_02.webp", "geo_03.webp"],
         },
       ],
       otherProjects: [
