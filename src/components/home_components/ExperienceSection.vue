@@ -48,7 +48,7 @@ export default {
           description: `
             As Software Engineering Team Lead at Liaison International, I led the successful launch of two high-traffic platforms—<a target="_blank" href="https://explorehealthcareers.org">Explore Health Careers</a> and <a target="_blank" href="https://residencycas.com">ResidencyCAS.com</a>—within two months, <span class="text-light">optimized for SEO, accessibility, and 3,000 concurrent users</span>. I authored technical architecture plans, facilitated agile ceremonies, and aligned engineering efforts with business goals. By refactoring CI/CD pipelines and formalizing code reviews, <span class="text-light">I reduced bugs by 30% and cut deployment times by 80%</span>.
           `,
-          daterange: "Dec 2023 — Sep 2024",
+          daterange: "Sep 2024 - Present",
           skills: [            
             { type: "text", label: "Software Architecture & Design" },
             { type: "text", label: "Django" },
