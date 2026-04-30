@@ -103,7 +103,7 @@ onMounted(() => {
   camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 100);
   camera.position.set( 2,1.5,2 );
 
-  renderer = new THREE.WebGLRenderer( { antialias: false, powerPreference: "high-performance", precision: "mediump" } );
+  renderer = new THREE.WebGLRenderer( { antialias: false, precision: "mediump" } );
   renderer.setSize( width, height );
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   renderer.setAnimationLoop( animate );
