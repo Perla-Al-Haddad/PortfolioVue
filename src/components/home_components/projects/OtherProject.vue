@@ -35,7 +35,10 @@
             <SkillBadgeList :skills="project.skills" />
           </div>
         </div>
-        <LearnMoreLink v-if="project.learnMore" />
+        <LearnMoreLink 
+          v-if="project.learnMore" 
+          :route="getProjectRoute()"
+        />
       </div>
     </div>
   </div>
@@ -57,6 +60,14 @@ export default {
       description: String,
       skills: Array,
       images: Array,
+    },
+  },
+  methods: {
+    getProjectRoute() {
+      const projectRoutes = {
+        "SIRI": "/projects/siri",
+      };
+      return projectRoutes[this.project.name] || "/coming-soon";
     },
   },
 };

@@ -2,7 +2,7 @@
   <header>
     <nav class="navbar navbar-expand-lg pt-4">
       <div class="container">
-        <a class="navbar-brand" href="#"
+        <a class="navbar-brand" href="/PortfolioVue/"
           ><img src="../assets/images/pal.png" width="65" alt=""
         /></a>
         <button
@@ -28,7 +28,7 @@
               <a
                 v-if="link.type == 'link'"
                 class="nav-link text-gray"
-                :href="`#${link.id}`"
+                @click="handleNavClick(link.id)"
                 >{{ link.name }}</a
               >
               <a
@@ -143,6 +143,18 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    handleNavClick(sectionId) {
+      if (this.$route.path === "/") {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        this.$router.push({ path: "/", hash: `#${sectionId}` });
+      }
+    },
   },
 };
 </script>

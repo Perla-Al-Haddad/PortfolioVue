@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router"
 
 import ComingSoon from "../views/ComingSoon"
 import HomeView from "../views/HomeView"
+import SiriProject from "../views/projects/SiriProject"
 
 const routes = [
     {
@@ -13,12 +14,30 @@ const routes = [
         path: "/coming-soon",
         name: "ComingSoon",
         component: ComingSoon
+    },
+    {
+        path: "/projects/siri",
+        name: "SiriProject",
+        component: SiriProject
     }
 ]
 
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
-    routes
+    routes,
+    scrollBehavior(to) {
+        if (to.hash) {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    const element = document.querySelector(to.hash);
+                    if (element) {
+                        element.scrollIntoView({ behavior: "smooth" });
+                        resolve();
+                    }
+                }, 100);
+            });
+        }
+    }
 })
 
 export default router

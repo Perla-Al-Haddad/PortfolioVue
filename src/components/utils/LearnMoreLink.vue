@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <router-link
-      to="/coming-soon"
+      :to="route"
       class="text-blue text-decoration-none arrow-button"
     >
       learn more
@@ -9,6 +9,18 @@
     </router-link>
   </div>
 </template>
+
+<script>
+export default {
+  name: "LearnMoreLink",
+  props: {
+    route: {
+      type: String,
+      default: "/coming-soon",
+    },
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 @mixin standard {
