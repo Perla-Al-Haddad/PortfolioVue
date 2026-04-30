@@ -43,9 +43,13 @@
 
         <div class="mb-4">
           <h3 class="fw-bold mb-3">Comparaison avant et après nettoyage avec Blender</h3>
-          <div class="d-flex gap-2 mx-5">
-            <img :src="getImgUrl('siri_base_shoe.png')" class="d-block w-100 rounded" alt="siri_base_shoe.png" />
-            <img :src="getImgUrl('siri_clean_shoe.png')" class="d-block w-100 rounded" alt="siri_clean_shoe.png" />
+          <div class="row mx-5">
+            <div class="col-12 col-md-6 mb-2">
+              <img :src="getImgUrl('siri_base_shoe.png')" loading="lazy" class="img-fluid rounded w-100" alt="siri_base_shoe.png" />
+            </div>
+            <div class="col-12 col-md-6 mb-2">
+              <img :src="getImgUrl('siri_clean_shoe.png')" loading="lazy" class="img-fluid rounded w-100" alt="siri_clean_shoe.png" />
+            </div>
           </div>
         </div>
 
@@ -73,6 +77,7 @@ const image = ref("siri_shoe.png");
 
 const containerRef = ref(null);
 let scene, camera, renderer, controls;
+let isVisible = false;
 
 const getImgUrl = (pic) => {
   return require("@/assets/images/" + pic);
@@ -86,9 +91,9 @@ onMounted(() => {
   camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 100);
   camera.position.set( 2,1.5,2 );
 
-  renderer = new THREE.WebGLRenderer( { antialias: true } );
+  renderer = new THREE.WebGLRenderer( { antialias: false, powerPreference: "high-performance", precision: "mediump" } );
   renderer.setSize( width, height );
-  renderer.setPixelRatio( window.devicePixelRatio );
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   renderer.setAnimationLoop( animate );
   containerRef.value.appendChild( renderer.domElement );
 
@@ -125,6 +130,7 @@ onMounted(() => {
     model.position.sub(center); 
     scene.add(model);
     document.getElementById('loading-message').style.display = 'none';
+    dracoLoader.dispose();
   }, undefined, ( error ) => {
     console.error( 'Error loading model:', error );
   } );
@@ -136,11 +142,23 @@ onMounted(() => {
   
   const axesHelper = new THREE.AxesHelper( 2 );
   scene.add( axesHelper );
+
+  const observer = new IntersectionObserver((entries) => {
+    isVisible = entries[0].isIntersecting;
+    if (isVisible) {
+      animate();
+    }
+  });
+  
+  observer.observe(containerRef.value);
 });
 
-function animate( ) {
+function animate() {
+  if (!isVisible) {
+    return;
+  } 
   controls.update();
-  renderer.render( scene, camera );
+  renderer.render(scene, camera);
 }
 </script>
 
