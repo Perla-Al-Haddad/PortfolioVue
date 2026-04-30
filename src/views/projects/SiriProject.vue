@@ -73,6 +73,18 @@ const skills = ref([
   { type: "text", label: "ThreeJs" },
 ]);
 
+
+let isScrolling;
+
+window.addEventListener('scroll', () => {
+  isScrolling = true;
+  window.clearTimeout(isScrolling);
+  isScrolling = setTimeout(() => {
+    isScrolling = false;
+  }, 100);
+}, { passive: true });
+
+
 const image = ref("siri_shoe.png");
 
 const containerRef = ref(null);
@@ -154,12 +166,13 @@ onMounted(() => {
 });
 
 function animate() {
-  if (!isVisible) {
+  if (!isVisible || isScrolling) {
     return;
   } 
   controls.update();
   renderer.render(scene, camera);
 }
+
 </script>
 
 <style scoped>
