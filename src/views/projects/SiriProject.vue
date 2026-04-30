@@ -9,6 +9,7 @@
         <h1 class="fw-bolder mb-4 text-dark">SIRI - Projet Photogrammétrie</h1>
 
         <div ref="containerRef" id="moteur-container"></div>
+        <div id="loading-message" class="my-2">Loading...</div>
 
         <div class="row my-4">
           <div class="col-12">
@@ -32,6 +33,11 @@
                   
                   <p class="mt-4 text-gray">Le modèle de base obtenu étant trop volumineux pour être hébergé sur GitHub Pages, il a été compressé à l'aide de l'outil en ligne disponible sur <a href="https://compress-glb.com/" target="_blank">compress-glb.com</a>. De plus, la bibliothèque de compression Draco a été intégrée afin de permettre le chargement du modèle 3D compressé dans Three.js.
                   </p>
+
+                  <div class="mt-4 d-flex gap-2">
+                    <p class="text-gray">Lien du project:</p>
+                    <GithubLink :url="githubUrl" />
+                  </div>
             </div>
         </div>
 
@@ -54,7 +60,9 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import GithubLink from "../../components/utils/GithubLink.vue";
 
+const githubUrl = "https://github.com/Perla-Al-Haddad/PortfolioVue/blob/main/src/views/projects/SiriProject.vue";
 const skills = ref([
   { type: "text", label: "RealityScan" },
   { type: "text", label: "Blender" },
@@ -115,8 +123,8 @@ onMounted(() => {
     const center = box.getCenter(new THREE.Vector3());
     center.y -= 0.5;
     model.position.sub(center); 
-
-    scene.add(model);    
+    scene.add(model);
+    document.getElementById('loading-message').style.display = 'none';
   }, undefined, ( error ) => {
     console.error( 'Error loading model:', error );
   } );
@@ -125,6 +133,9 @@ onMounted(() => {
   const divisions = 10;
   const gridHelper = new THREE.GridHelper( size, divisions );
   scene.add( gridHelper );
+  
+  const axesHelper = new THREE.AxesHelper( 2 );
+  scene.add( axesHelper );
 });
 
 function animate( ) {
