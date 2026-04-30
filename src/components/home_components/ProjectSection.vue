@@ -167,7 +167,7 @@ export default {
           name: "SIRI",
           githubUrl: "",
           description:
-            "M1 ISICG Photogrammetry project. Created a photogrammetry pipeline using RealityScan, Blender, and ThreeJs to generate 3D models from images.",
+            "M1 ISICG Photogrammetry project. Created a 3D model with photogrammetry using RealityScan, Blender, and ThreeJs.",
           skills: [
             { type: "text", label: "RealityScan" },
             { type: "text", label: "Blender" },

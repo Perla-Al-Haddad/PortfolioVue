@@ -122,21 +122,6 @@ export default {
           type: "link",
         },
         {
-          name: "Resume",
-          id: "resume",
-          type: "dropdown",
-          resumeLinks: [
-            {
-              name: "English Resume",
-              url: "resume-en.pdf",
-            },
-            {
-              name: "French Resume",
-              url: "resume-fr.pdf",
-            },
-          ],
-        },
-        {
           name: "Contact",
           id: "contact",
           type: "link",

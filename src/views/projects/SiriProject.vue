@@ -1,23 +1,47 @@
 <template>
-  <div class="container py-5">
+  <div class="container py-2">
     <div class="row">
-      <div class="col-12 col-lg-8 offset-lg-2">
+      <div class="col-12 col-lg-10 offset-lg-1">
         <router-link to="/#projects" class="text-blue text-decoration-none mb-3">
           <i class="fas fa-arrow-left"></i> Back to Projects
         </router-link>
 
-        <h1 class="fw-bolder mb-4 text-dark">SIRI - Photogrammetry Project</h1>
+        <h1 class="fw-bolder mb-4 text-dark">SIRI - Projet Photogrammétrie</h1>
 
-        <div class="row mb-4">
+        <div ref="containerRef" id="moteur-container"></div>
+
+        <div class="row my-4">
           <div class="col-12">
-            <h3 class="fw-bold mb-3">Technologies Used</h3>
+            <h3 class="fw-bold mb-3">Technologies Utilisées</h3>
             <div class="d-flex flex-wrap gap-2">
               <SkillBadgeList :skills="skills" />
             </div>
           </div>
         </div>
 
-        <div ref="containerRef" id="moteur-container"></div>
+        <div class="container d-flex flex-column flex-lg-row gap-4 mb-4">
+            <div>
+                <img :src="getImgUrl(image)" class="d-block w-100 rounded" :alt="image" />
+            </div>
+            <div class="col-lg-6">
+                <p class="mt-4 text-gray">
+                  Le projet consiste à créer un modèle 3D d'une chaussure à partir d'un ensemble de 130 images à l'aide de la photogrammétrie. Le modèle a été généré à l'aide du logiciel <a href="https://www.realityscan.com/" target="_blank">RealityScan</a>.</p> <p class="mt-4 text-gray">Plusieurs essais ont été nécessaires pour obtenir des résultats satisfaisants, le meilleur résultat ayant été obtenu en plaçant la chaussure sur une feuille de papier blanc marquée de cercles et de croix. Ces repères ont fourni des références visuelles supplémentaires, aidant le logiciel à établir des correspondances précises entre les images.</p>
+
+                  <p class="mt-4 text-gray">
+                    Le post-traitement et le nettoyage ont été effectués dans <a href="https://www.blender.org/" target="_blank">Blender</a> à l'aide d'outils de modélisation et de sculpture.</p> 
+                  
+                  <p class="mt-4 text-gray">Le modèle de base obtenu étant trop volumineux pour être hébergé sur GitHub Pages, il a été compressé à l'aide de l'outil en ligne disponible sur <a href="https://compress-glb.com/" target="_blank">compress-glb.com</a>. De plus, la bibliothèque de compression Draco a été intégrée afin de permettre le chargement du modèle 3D compressé dans Three.js.
+                  </p>
+            </div>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="fw-bold mb-3">Comparaison avant et après nettoyage avec Blender</h3>
+          <div class="d-flex gap-2 mx-5">
+            <img :src="getImgUrl('siri_base_shoe.png')" class="d-block w-100 rounded" alt="siri_base_shoe.png" />
+            <img :src="getImgUrl('siri_clean_shoe.png')" class="d-block w-100 rounded" alt="siri_clean_shoe.png" />
+          </div>
+        </div>
 
       </div>
     </div>
@@ -28,7 +52,7 @@ import SkillBadgeList from "../../components/utils/SkillBadgeList.vue";
 import { onMounted, ref } from 'vue';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'; // Fixed path
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 const skills = ref([
@@ -37,15 +61,22 @@ const skills = ref([
   { type: "text", label: "ThreeJs" },
 ]);
 
+const image = ref("siri_shoe.png");
+
 const containerRef = ref(null);
 let scene, camera, renderer, controls;
 
+const getImgUrl = (pic) => {
+  return require("@/assets/images/" + pic);
+};
+
 onMounted(() => {
   const width = containerRef.value.clientWidth;
-  const height = window.innerHeight * 0.6;
+  const height = window.innerHeight * 0.8;
 
   scene = new THREE.Scene();
   camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 100);
+  camera.position.set( 2,1.5,2 );
 
   renderer = new THREE.WebGLRenderer( { antialias: true } );
   renderer.setSize( width, height );
@@ -70,6 +101,7 @@ onMounted(() => {
   loader.setDRACOLoader(dracoLoader);
   
   loader.load( '/PortfolioVue/shoe_clean.compressed.glb', ( gltf ) => {
+    
     const model = gltf.scene;
     
     const box = new THREE.Box3().setFromObject(model);
@@ -81,10 +113,10 @@ onMounted(() => {
 
     box.setFromObject(model); 
     const center = box.getCenter(new THREE.Vector3());
-    center.y -= 0.68;
+    center.y -= 0.5;
     model.position.sub(center); 
 
-    scene.add(model);
+    scene.add(model);    
   }, undefined, ( error ) => {
     console.error( 'Error loading model:', error );
   } );
